@@ -314,10 +314,7 @@ header .container {
 .team-soc-link:is(:hover, :focus) {
   background-color: var(--color-ocean-pressed);
 }
-
 .team-soc-icon {
-  width: 16px;
-  height: 16px;
   fill: var(--color-cloud);
 }
 
