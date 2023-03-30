@@ -11,6 +11,8 @@
   --color-green: #31d0aa;
   --color-light-slate: #8e8f99;
   --gradient-bg: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
+  --box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 p,
@@ -91,11 +93,13 @@ address {
   display: block;
   margin: 0 auto;
   border-radius: 4px;
+  border: none;
 }
 
 .modal-btn:is(:hover, :focus) {
   background-color: var(--color-ocean-pressed);
   color: var(--color-white-main);
+  border-color: transparent;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -183,8 +187,7 @@ address {
   padding-top: 24px;
   padding-bottom: 24px;
   border-bottom: 1px solid var(--color-cornflower-borders);
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  box-shadow: var(--box-shadow);
 }
 
 header .container {
@@ -285,6 +288,8 @@ header .container {
   background-color: var(--color-white-main);
   text-align: center;
   width: calc((100% - 72px) / 4);
+  box-shadow: var(--box-shadow);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-item-info {
@@ -345,17 +350,44 @@ header .container {
   height: 100%;
 }
 .customers-icon-link:is(:hover, :focus) {
-  border-color: var(--color-ocean-pressed);
+  border-color: tomato;
 }
 
-.customers-icon:is(:hover, :focus) {
-  fill: currentColor;
+.customers-icon-link:is(:hover, :focus) .customers-icon {
+  border-color: tomato;
+  fill: teal;
 }
+
+/* .customers-icon:is(:hover, :focus) {
+  fill: currentColor;
+} */
+
+/* .customers-icon-link:hover .customers-icon,
+.customers-icon-link:focus .customers-icon {
+  fill: teal;
+} */
 .customers-icon {
   width: 104px;
   height: 56px;
-  fill: var(--color-light-slate);
+  fill: currentColor;
 }
+
+/* .comment {
+  text-decoration: none;
+  color: green;
+  font-family: sans-serif;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+.comment-icon {
+  margin-right: 0.5rem;
+  --icon-color: currentColor;
+}
+.comment:hover {
+  color: orangered;
+}
+ */
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< FOOTER */
 /* footer .container {
@@ -403,8 +435,17 @@ header .container {
   gap: 48px 24px;
 }
 
-/* .portfolio-link {
-} */
+/* .portfolio-link {} */
+
+.portfolio-item:is(:hover, :focus) {
+  border: 1px solid #f4f4fd;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+/* border: 1px solid #F4F4FD;
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); */
 
 .portfolio-item {
   width: calc((100% - 48px) / 3);
