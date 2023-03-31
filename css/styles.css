@@ -361,9 +361,9 @@ header .container {
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< FOOTER */
-/* footer .container {
+footer .container {
   display: flex;
-} */
+}
 
 .footer {
   background-color: var(--color-navy-blue-secondary);
@@ -379,6 +379,30 @@ header .container {
   width: 264px;
   margin-top: 16px;
 }
+
+.footer-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* 
+.footer-soc-list hover
+
+ul to a
+.team-network .social-netwerk-link:hover,
+.team-network .social-netwerk-link:focus,
+.active::after,
+.close-btn:hover,
+.close-btn:focus {
+    background: var(--color-pressed-state);
+}
+div to a
+.footer-social-box .social-netwerk-link:hover,
+.footer-social-box .social-netwerk-link:focus {
+    background-color: var(--color-valid-success);
+}
+*/
 
 /** <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< PORTFOLIO Filter */
 .portfolio {
@@ -433,6 +457,8 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
 }
 
 /* 
-div.footer-soc-box>h3+ul.footer-soc-list.list>li
+div.footer-soc-box>h3.section-subtitle.title-theme-dark+ul.footer-soc-list.list>li.team-soc-item*4>a.team-soc-link.link>svg.team-soc-icon>use
+font-size: 16px;
+line-height: 24px;
 
  */
